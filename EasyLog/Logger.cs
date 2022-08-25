@@ -55,28 +55,28 @@ namespace EasyLog
         public void Debug(object Content)
         {
             string LogText = ProcessLogText((int)LogLevel.Debug) + Content;
-            if (cfg.Console) { Console.WriteLine(LogText, Console.BackgroundColor = ConsoleColor.DarkYellow); Console.BackgroundColor = ConsoleColor.Black; }
+            if (cfg.Console) { Console.WriteLine(LogText, Console.BackgroundColor = ConsoleColor.DarkYellow, Console.ForegroundColor = ConsoleColor.White); Console.BackgroundColor = ConsoleColor.White; }
             File.AppendAllText(cfg.LogPath, LogText + Environment.NewLine);
         }
 
         public void Info(object Content)
         {
             string LogText = ProcessLogText((int)LogLevel.Info) + Content;
-            if (cfg.Console) { Console.WriteLine(LogText, Console.BackgroundColor = ConsoleColor.Blue); Console.BackgroundColor = ConsoleColor.Black; }
+            if (cfg.Console) { Console.WriteLine(LogText, Console.BackgroundColor = ConsoleColor.Blue, Console.ForegroundColor = ConsoleColor.White); Console.BackgroundColor = ConsoleColor.White; }
             File.AppendAllText(cfg.LogPath, LogText + Environment.NewLine);
         }
 
         public void Warning(object Content)
         {
             string LogText = ProcessLogText((int)LogLevel.Warning) + Content;
-            if (cfg.Console) { Console.WriteLine(LogText, Console.BackgroundColor = ConsoleColor.Red); Console.BackgroundColor = ConsoleColor.Black; }
+            if (cfg.Console) { Console.WriteLine(LogText, Console.BackgroundColor = ConsoleColor.Red, Console.ForegroundColor = ConsoleColor.White); Console.BackgroundColor = ConsoleColor.White; }
             File.AppendAllText(cfg.LogPath, LogText + Environment.NewLine);
         }
 
         public void Error(object Content)
         {
             string LogText = ProcessLogText((int)LogLevel.Error) + Content;
-            if (cfg.Console) { Console.WriteLine(LogText, Console.BackgroundColor = ConsoleColor.DarkRed); Console.BackgroundColor = ConsoleColor.Black; }
+            if (cfg.Console) { Console.WriteLine(LogText, Console.BackgroundColor = ConsoleColor.DarkRed, Console.ForegroundColor = ConsoleColor.White); Console.BackgroundColor = ConsoleColor.White; }
             File.AppendAllText(cfg.LogPath, LogText + Environment.NewLine);
         }
     }
