@@ -6,7 +6,7 @@
     <TargetVersion>net6.0</TargetVersion>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <PackageId>EasyLog</PackageId>
-    <Version>1.0.0</Version>
+    <Version>1.0.6-pre1</Version>
     <Authors>0x74</Authors>
     <PackageDescription>Simple and easy to use logging system.</PackageDescription>
     <RepositoryUrl>https://github.com/asoji/EasyLog</RepositoryUrl>
