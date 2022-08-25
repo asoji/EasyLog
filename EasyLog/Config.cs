@@ -11,5 +11,6 @@ namespace EasyLog
         public bool ShowDate = true;
         public bool Console = true;
         public string LogPath = Environment.CurrentDirectory + @"\Application.log";
+        public bool UseColon = true;
     }
 }

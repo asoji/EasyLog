@@ -21,11 +21,12 @@ namespace Example
             SetConfig();
             log.cfg = cfg;
             log.InitLogger();//Call this to init logger
-            log.Info("This is info log");
-            log.Debug("This is debug log");
-            log.Warning("This is warning text");
-            log.Error("This is error text");
-            log.Info("press any key to stop example");
+            log.Info("This is info text!");
+            log.Debug("This is debug text!");
+            log.Warning("This is warning text!");
+            log.Error("This is error text!");
+            log.Critical("This is critical text!");
+            log.Info("Press any key to stop this example!");
             Console.ReadKey();
         }
     }
