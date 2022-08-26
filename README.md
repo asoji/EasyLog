@@ -133,7 +133,7 @@ class Program {
             try {
                 // do some random shit
             } catch (ArgumentOutOfRangeException outOfRangeException) {
-                log.Error("hey something is out of range?");
+                log.Critical("hey something is out of range?");
             }
             
             Console.ReadKey();
