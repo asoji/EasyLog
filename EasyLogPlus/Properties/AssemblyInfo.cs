@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("EasyLogPlus")]
-[assembly: AssemblyDescription("Simple and easy to use logging system. Extended by asoji.")]
+[assembly: AssemblyDescription("A [relatively] simple .NET 6 logging library. Originally made by byte-0x74, extended by asoji.")]
 [assembly: AssemblyConfiguration("Release")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("EasyLogPlus")]
-[assembly: AssemblyCopyright("Copyright ©  2022")]
+[assembly: AssemblyCopyright("Copyright © 0x74, asoji 2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

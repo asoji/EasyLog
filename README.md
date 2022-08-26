@@ -2,7 +2,7 @@
   EasyLogPlus
 </h1>
 <p align="center">
-  Simple and easy to use logging system originally created by 0x74. Extended by asoji.
+  A [relatively] simple .NET 6 logging library. Originally made by byte-0x74, extended by asoji.
   <br>
   <img src="https://user-images.githubusercontent.com/99072163/186797668-77e1dbeb-69a5-43bf-b9a3-b513468cc6d8.png">
 </p>

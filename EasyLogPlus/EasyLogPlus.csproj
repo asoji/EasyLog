@@ -8,7 +8,7 @@
     <PackageId>EasyLogPlus</PackageId>
     <Version>1.0.6-pre2</Version>
     <Authors>0x74, extended by asoji</Authors>
-    <PackageDescription>Simple and easy to use logging system. Extended by asoji.</PackageDescription>
+    <PackageDescription>A [relatively] simple .NET 6 logging library. Originally made by byte-0x74, extended by asoji.</PackageDescription>
     <RepositoryUrl>https://github.com/asoji/EasyLogPlus</RepositoryUrl>
   </PropertyGroup>
   <ItemGroup>
