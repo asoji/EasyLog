@@ -47,12 +47,23 @@ void SetConfig()
     // ENTIRELY optional, just add and change if you want.
     cfg.UseColon = true; // If set to true, uses `:` in logs instead of `=>`
 
-    cfg.DebugForeground = ConsoleColor.Blue;
-    cfg.InfoForeground = ConsoleColor.Gray;
-    cfg.NoticeForeground = ConsoleColor.Green;
-    cfg.WarningForeground = ConsoleColor.DarkYellow;
-    cfg.ErrorForeground = ConsoleColor.Red;
+    cfg.LogPath = Environment.CurrentDirectory + $@"\Application.log"; // Sets where your Log saves and under what name
 
+    // Logger color customization
+    cfg.DebugText = ConsoleColor.Blue;
+    cfg.InfoText = System.Console.ForegroundColor;
+    cfg.NoticeText = ConsoleColor.Green;
+    cfg.WarningText = ConsoleColor.DarkYellow;
+    cfg.ErrorText = ConsoleColor.Red;
+    cfg.CriticalText = ConsoleColor.White;
+    cfg.AlertText = ConsoleColor.White;
+    cfg.EmergencyText = ConsoleColor.White;
+
+    cfg.DebugBackground = System.Console.BackgroundColor;
+    cfg.InfoBackground = System.Console.BackgroundColor;
+    cfg.NoticeBackground = System.Console.BackgroundColor;
+    cfg.WarningBackground = System.Console.BackgroundColor;
+    cfg.ErrorBackground = System.Console.BackgroundColor;
     cfg.CriticalBackground = ConsoleColor.DarkRed;
     cfg.AlertBackground = ConsoleColor.DarkBlue;
     cfg.EmergencyBackground = ConsoleColor.DarkMagenta;
@@ -121,6 +132,7 @@ class Program {
             cfg.UseColon = false;
 
             cfg.CriticalBackground = ConsoleColor.Cyan;
+            cfg.NoticeText = ConsoleColor.Magenta;
         }
 
         static void Main(string[] args) {

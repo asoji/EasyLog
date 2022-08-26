@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EasyLogPlus {
     public class Config {
@@ -13,12 +8,20 @@ namespace EasyLogPlus {
         
         public string LogPath = Environment.CurrentDirectory + $@"\Application.log";
 
-        public ConsoleColor DebugForeground = ConsoleColor.Blue;
-        public ConsoleColor InfoForeground = ConsoleColor.Gray;
-        public ConsoleColor NoticeForeground = ConsoleColor.Green;
-        public ConsoleColor WarningForeground = ConsoleColor.DarkYellow;
-        public ConsoleColor ErrorForeground = ConsoleColor.Red;
+        public ConsoleColor DebugText = ConsoleColor.Blue;
+        public ConsoleColor InfoText = System.Console.ForegroundColor;
+        public ConsoleColor NoticeText = ConsoleColor.Green;
+        public ConsoleColor WarningText = ConsoleColor.DarkYellow;
+        public ConsoleColor ErrorText = ConsoleColor.Red;
+        public ConsoleColor CriticalText = ConsoleColor.White;
+        public ConsoleColor AlertText = ConsoleColor.White;
+        public ConsoleColor EmergencyText = ConsoleColor.White;
 
+        public ConsoleColor DebugBackground = System.Console.BackgroundColor;
+        public ConsoleColor InfoBackground = System.Console.BackgroundColor;
+        public ConsoleColor NoticeBackground = System.Console.BackgroundColor;
+        public ConsoleColor WarningBackground = System.Console.BackgroundColor;
+        public ConsoleColor ErrorBackground = System.Console.BackgroundColor;
         public ConsoleColor CriticalBackground = ConsoleColor.DarkRed;
         public ConsoleColor AlertBackground = ConsoleColor.DarkBlue;
         public ConsoleColor EmergencyBackground = ConsoleColor.DarkMagenta;

@@ -26,9 +26,7 @@ namespace EasyLogPlus {
         }
 
         public string ProcessLogText(int level) {
-            if (isInit == false) {
-                return "Please Init logger first! you can init it by calling *YourLogName*.InitLogger();";
-            }
+            if (isInit == false) { return "Please Init logger first! you can init it by calling *YourLogName*.InitLogger();"; }
 
             object text = string.Empty;
 
@@ -82,8 +80,10 @@ namespace EasyLogPlus {
         public void Debug(object Content) {
             string LogText = ProcessLogText((int)LogLevel.Debug) + Content;
             if (cfg.Console) {
-                Console.WriteLine(LogText, Console.ForegroundColor = cfg.DebugForeground);
-                Console.ForegroundColor = ConsoleColor.White;
+                Console.Write(LogText, Console.ForegroundColor = cfg.DebugText,
+                    Console.BackgroundColor = cfg.DebugBackground);
+                Console.ResetColor();
+                Console.WriteLine();
             }
 
             File.AppendAllText(cfg.LogPath, LogText + Environment.NewLine);
@@ -92,18 +92,22 @@ namespace EasyLogPlus {
         public void Info(object Content) {
             string LogText = ProcessLogText((int)LogLevel.Info) + Content;
             if (cfg.Console) {
-                Console.WriteLine(LogText, Console.ForegroundColor = cfg.InfoForeground);
-                Console.ForegroundColor = ConsoleColor.White;
+                Console.Write(LogText, Console.ForegroundColor = cfg.InfoText,
+                    Console.BackgroundColor = cfg.InfoBackground);
+                Console.ResetColor();
+                Console.WriteLine();
             }
 
             File.AppendAllText(cfg.LogPath, LogText + Environment.NewLine);
         }
-        
+
         public void Notice(object Content) {
             string LogText = ProcessLogText((int)LogLevel.Notice) + Content;
             if (cfg.Console) {
-                Console.WriteLine(LogText, Console.ForegroundColor = cfg.NoticeForeground);
-                Console.ForegroundColor = ConsoleColor.White;
+                Console.Write(LogText, Console.ForegroundColor = cfg.NoticeText,
+                    Console.BackgroundColor = cfg.NoticeBackground);
+                Console.ResetColor();
+                Console.WriteLine();
             }
 
             File.AppendAllText(cfg.LogPath, LogText + Environment.NewLine);
@@ -112,8 +116,10 @@ namespace EasyLogPlus {
         public void Warning(object Content) {
             string LogText = ProcessLogText((int)LogLevel.Warning) + Content;
             if (cfg.Console) {
-                Console.WriteLine(LogText, Console.ForegroundColor = cfg.WarningForeground);
-                Console.ForegroundColor = ConsoleColor.White;
+                Console.Write(LogText, Console.ForegroundColor = cfg.WarningText,
+                    Console.BackgroundColor = cfg.WarningBackground);
+                Console.ResetColor();
+                Console.WriteLine();
             }
 
             File.AppendAllText(cfg.LogPath, LogText + Environment.NewLine);
@@ -122,9 +128,10 @@ namespace EasyLogPlus {
         public void Error(object Content) {
             string LogText = ProcessLogText((int)LogLevel.Error) + Content;
             if (cfg.Console) {
-                Console.WriteLine(LogText, Console.ForegroundColor = cfg.ErrorForeground);
-                Console.ForegroundColor = ConsoleColor.White;
-                Console.BackgroundColor = ConsoleColor.Black;
+                Console.Write(LogText, Console.ForegroundColor = cfg.ErrorText,
+                    Console.BackgroundColor = cfg.ErrorBackground);
+                Console.ResetColor();
+                Console.WriteLine();
             }
 
             File.AppendAllText(cfg.LogPath, LogText + Environment.NewLine);
@@ -133,34 +140,34 @@ namespace EasyLogPlus {
         public void Critical(object Content) {
             string LogText = ProcessLogText((int)LogLevel.Critical) + Content;
             if (cfg.Console) {
-                Console.WriteLine(LogText, Console.ForegroundColor = ConsoleColor.White,
+                Console.Write(LogText, Console.ForegroundColor = cfg.CriticalText,
                     Console.BackgroundColor = cfg.CriticalBackground);
-                Console.ForegroundColor = ConsoleColor.White;
-                Console.BackgroundColor = ConsoleColor.Black;
+                Console.ResetColor();
+                Console.WriteLine();
             }
 
             File.AppendAllText(cfg.LogPath, LogText + Environment.NewLine);
         }
-        
+
         public void Alert(object Content) {
             string LogText = ProcessLogText((int)LogLevel.Alert) + Content;
             if (cfg.Console) {
-                Console.WriteLine(LogText, Console.ForegroundColor = ConsoleColor.White,
+                Console.Write(LogText, Console.ForegroundColor = cfg.AlertText,
                     Console.BackgroundColor = cfg.AlertBackground);
-                Console.ForegroundColor = ConsoleColor.White;
-                Console.BackgroundColor = ConsoleColor.Black;
+                Console.ResetColor();
+                Console.WriteLine();
             }
 
             File.AppendAllText(cfg.LogPath, LogText + Environment.NewLine);
         }
-        
+
         public void Emergency(object Content) {
             string LogText = ProcessLogText((int)LogLevel.Emergency) + Content;
             if (cfg.Console) {
-                Console.WriteLine(LogText, Console.ForegroundColor = ConsoleColor.White,
+                Console.Write(LogText, Console.ForegroundColor = cfg.EmergencyText,
                     Console.BackgroundColor = cfg.EmergencyBackground);
-                Console.ForegroundColor = ConsoleColor.White;
-                Console.BackgroundColor = ConsoleColor.Black;
+                Console.ResetColor();
+                Console.WriteLine();
             }
 
             File.AppendAllText(cfg.LogPath, LogText + Environment.NewLine);
