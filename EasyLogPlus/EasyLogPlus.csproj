@@ -11,10 +11,4 @@
     <PackageDescription>A [relatively] simple .NET 6 logging library. Originally made by byte-0x74, extended by asoji.</PackageDescription>
     <RepositoryUrl>https://github.com/asoji/EasyLogPlus</RepositoryUrl>
   </PropertyGroup>
-  <ItemGroup>
-    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
-    <PackageReference Include="Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers" Version="0.4.336902">
-      <PrivateAssets>all</PrivateAssets>
-    </PackageReference>
-  </ItemGroup>
 </Project>

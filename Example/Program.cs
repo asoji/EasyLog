@@ -26,9 +26,9 @@ namespace Example {
             log.Critical("This is critical text!");
             log.Alert("This is alert text!");
             log.Emergency("This is emergency text!");
-            
+
             log.Info("Press any key to stop this example!");
-            
+
             Console.ReadKey();
         }
     }
