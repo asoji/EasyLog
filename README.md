@@ -4,7 +4,7 @@
 <p align="center">
   A [relatively] simple .NET 6 logging library. Originally made by byte-0x74, extended by asoji.
   <br>
-  <img src="https://user-images.githubusercontent.com/99072163/186797668-77e1dbeb-69a5-43bf-b9a3-b513468cc6d8.png">
+  <img src="https://user-images.githubusercontent.com/99072163/186907762-6b24191b-86a0-40c7-acf3-ed2286aed5b8.png">
 </p>
 
 ## What's different between this and the original repo?
@@ -28,9 +28,7 @@ It looks a lot better like this now
 
 ## How to use?
 - Install EasyLogPlus from GitHub's NuGet Registry, instructions [here](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-nuget-registry#installing-a-package), make sure it's authors are `0x74, extended by asoji`
-- Add `using EasyLogPlus;`
-to top
-Then add
+- Add `using EasyLogPlus;` to the top, and then add
 ```cs
 Logger log = new Logger();
 Config cfg = new Config();
