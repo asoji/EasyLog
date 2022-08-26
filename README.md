@@ -27,8 +27,8 @@ It looks a lot better like this now
 ![ohyes](https://user-images.githubusercontent.com/99072163/186800405-88117e0d-6ce8-4504-97cd-b477f15cfd78.png)
 
 ## How to use?
-- Install EasyLog from GitHub's NuGet Registry, instructions [here](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-nuget-registry#installing-a-package), make sure it's authors are `0x74, extended by asoji`
-- Add `using EasyLog;`
+- Install EasyLogPlus from GitHub's NuGet Registry, instructions [here](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-nuget-registry#installing-a-package), make sure it's authors are `0x74, extended by asoji`
+- Add `using EasyLogPlus;`
 to top
 Then add
 ```cs
@@ -42,7 +42,7 @@ If you want customize settings add these, keeping in mind that this whole `SetCo
 ```cs
 void SetConfig()
 {
-    cfg.LogPath = Environment.CurrentDirectory + @"\Application.log"; //Set path where you want log to be saved
+    cfg.LogPath = Environment.CurrentDirectory + @"\Application.log"; // Set path where you want log to be saved
     cfg.ShowDate = true; // If this is set to true it will add date to the log
     cfg.Console = true; // If this is set to true it will print the log to Console too
 
@@ -67,7 +67,7 @@ SetConfig();
 log.InitLogger(); // Call this to init logger
 ```
 
-## Sending logs
+## Using Logs
 - Debug Log
 ```cs
 log.Debug("Hello from log, this is debug");
