@@ -14,6 +14,7 @@
 - Added the whole Syslog Severity Level standardization [[read about that here](https://en.wikipedia.org/wiki/Syslog#Severity_level)], cranking from 4 severity levels to 8.
 - Uses your local timezone in logs instead of UTC timezone
 - Switchable between `:` and `=>` in logs, like `NOTICE: This is notice text!` or `NOTICE => This is notice text!` using `cfg.UseColon`
+- Ability to have Critical-Emergency logs be logged in a seperate file through `cfg.SeperateCriticalLogs`
 - **Probably a lot of breaking changes**, but I plan on basically keeping this seperate from the original project.
 
 Basically, I should've just made my own logger considering how much I changed, but eh, this fork works, and I'm pretty happy with it. 
@@ -41,8 +42,9 @@ If you want customize settings add these, keeping in mind that this whole `SetCo
 void SetConfig()
 {
     cfg.LogPath = Environment.CurrentDirectory + @"\Application.log"; // Set path where you want log to be saved
-    cfg.ShowDate = true; // If this is set to true it will add date to the log
-    cfg.Console = true; // If this is set to true it will print the log to Console too
+    cfg.ShowDate = true; // If this is set to true, it will add date to the log
+    cfg.Console = true; // If this is set to true, it will print the log to Console too
+    cfg.SeperateCriticalLogs = true; // If this is set to true, it will print Critical-Emergency logs to a seperate log file
 
     // ENTIRELY optional, just add and change if you want.
     cfg.UseColon = true; // If set to true, uses `:` in logs instead of `=>`
@@ -128,6 +130,7 @@ class Program {
             cfg.LogPath = Environment.CurrentDirectory + @"\Application.log";
             cfg.ShowDate = true;
             cfg.Console = true;
+            cfg.SeperateCriticalLogs = true;
 
             cfg.UseColon = false;
 
