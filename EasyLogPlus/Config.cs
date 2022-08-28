@@ -5,8 +5,10 @@ namespace EasyLogPlus {
         public bool ShowDate = true;
         public bool Console = true;
         public bool UseColon = true;
+        public bool SeperateCriticalLogs = true;
         
         public string LogPath = Environment.CurrentDirectory + $@"\Application.log";
+        public string CriticalLogPath = Environment.CurrentDirectory + $@"\Application-Critical.log";
 
         public ConsoleColor DebugText = ConsoleColor.Blue;
         public ConsoleColor InfoText = System.Console.ForegroundColor;

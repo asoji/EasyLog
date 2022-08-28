@@ -147,6 +147,9 @@ namespace EasyLogPlus {
             }
 
             File.AppendAllText(cfg.LogPath, LogText + Environment.NewLine);
+            if (cfg.SeperateCriticalLogs) {
+                File.AppendAllText(cfg.CriticalLogPath, LogText + Environment.NewLine);
+            }
         }
 
         public void Alert(object Content) {
@@ -159,6 +162,9 @@ namespace EasyLogPlus {
             }
 
             File.AppendAllText(cfg.LogPath, LogText + Environment.NewLine);
+            if (cfg.SeperateCriticalLogs) {
+                File.AppendAllText(cfg.CriticalLogPath, LogText + Environment.NewLine);
+            }
         }
 
         public void Emergency(object Content) {
@@ -171,6 +177,9 @@ namespace EasyLogPlus {
             }
 
             File.AppendAllText(cfg.LogPath, LogText + Environment.NewLine);
+            if (cfg.SeperateCriticalLogs) {
+                File.AppendAllText(cfg.CriticalLogPath, LogText + Environment.NewLine);
+            }
         }
     }
 }
