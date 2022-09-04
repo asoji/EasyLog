@@ -28,7 +28,12 @@ It looks a lot better like this now
 ![ohyes](https://user-images.githubusercontent.com/99072163/186800405-88117e0d-6ce8-4504-97cd-b477f15cfd78.png)
 
 ## How to use?
-- Install EasyLogPlus from GitHub's NuGet Registry, instructions [here](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-nuget-registry#installing-a-package), make sure it's authors are `0x74, extended by asoji`
+### Installation
+You have 2 ways:
+- [as of 1.0.6.1], you can now just grab `EasyLogPlus` from [NuGet](https://www.nuget.org/packages/EasyLogPlus/), or `dotnet add package EasyLogPlus`
+- Install EasyLogPlus from GitHub's NuGet Registry, instructions [here](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-nuget-registry#installing-a-package), make sure the author is `asoji`
+
+### Usage
 - Add `using EasyLogPlus;` to the top, and then add
 ```cs
 Logger log = new Logger();
